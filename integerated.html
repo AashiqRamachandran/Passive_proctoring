@@ -75,8 +75,30 @@
     <button onclick="isOnline()"> 
       This button checks if the user is online or offline
   </button> 
-  
     <p id="demo"></p>
+    </br>
+<div id="height">Height: <span></span></div> 
+    <div id="width">Width: <span></span></div> 
+      
+    <script> 
+        const height = document.querySelector("#height span"); 
+        const width = document.querySelector("#width span"); 
+           
+        // Insert values on load of page 
+        window.onload = function() { 
+            height.innerHTML = window.innerHeight; 
+            width.innerHTML = window.innerWidth; 
+        }; 
+           
+        // Change values when window is resized 
+        window.onresize = function() { 
+           
+            // Setting the current height & width 
+            // to the elements 
+            height.innerHTML = window.innerHeight;  
+            width.innerHTML = window.innerWidth; 
+        }; 
+    </script> 
 </div>
   </body>
 </html>
