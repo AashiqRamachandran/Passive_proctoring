@@ -2,6 +2,20 @@
 <html>
   <head>
     <title>RWQ</title>
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+    <script> 
+        // Add "https://ipinfo.io" statement 
+        // this will communicate with the ipify servers  
+        // in order to retrieve the IP address 
+  
+        $.get("https://ipinfo.io", function(response) { 
+            alert("User IP is: "+response.ip); 
+        }, "json") 
+  
+        // "json" shows that data will be fetched in json format 
+    </script> 
     <script>
 	document.addEventListener("contextmenu", function(e){
     		e.preventDefault();
@@ -29,6 +43,6 @@
 	2.This is an example of preventing pasting of answers in answer boxes</br></br>
 	Q.If faced with a ransomeware attack what is the prescribed measures?</br>
 	<input type="text" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off/>
-    </div>
+</div>
   </body>
 </html>
