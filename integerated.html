@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RWQ</title>
+    <script>
+	document.addEventListener("contextmenu", function(e){
+    		e.preventDefault();
+	}, false);
+    </script>
+    <style>
+      .unselectable {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #cc0000;
+      }
+    </style>
+  </head>
+  <body>
+<center>
+<h1>Passive Proctoring</h1>
+</center>
+    <div class="unselectable">
+	<p>
+	</br></br>
+	1.This text is an example of preventing text selection</br></br>
+	2.This is an example of preventing pasting of answers in answer boxes</br></br>
+	Q.If faced with a ransomeware attack what is the prescribed measures?</br>
+	<input type="text" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off/>
+    </div>
+  </body>
+</html>
