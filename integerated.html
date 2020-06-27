@@ -4,7 +4,26 @@
       <title>RWQ</title>
       <script src= 
          "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
-        <script src="ifvisible.js"></script>
+      <script>
+         var hidden, visibilityChange; 
+         if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
+           hidden = "hidden";
+           visibilityChange = "visibilitychange";
+         } else if (typeof document.msHidden !== "undefined") {
+           hidden = "msHidden";
+           visibilityChange = "msvisibilitychange";
+         } else if (typeof document.webkitHidden !== "undefined") {
+           hidden = "webkitHidden";
+           visibilityChange = "webkitvisibilitychange";
+         }
+         
+         function handleVisibilityChange() {
+           if (document[hidden]) {
+             alert("Dear user, we have noticed that you had switched tabs. Please refrain from doing so as it will lead to the test ending.");
+           }
+         }
+         document.addEventListener("visibilitychange", handleVisibilityChange, false);
+      </script>
       <script>
          //Check if online or offline
                  function isOnline() { 
@@ -116,4 +135,3 @@
       </div>
    </body>
 </html>
-
