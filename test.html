@@ -1,0 +1,661 @@
+
+
+<!doctype html>
+<html>
+   <head>
+      <script src= 
+         "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
+      <script>
+         var hidden, visibilityChange; 
+         if (typeof document.hidden !== "undefined") {
+           hidden = "hidden";
+           visibilityChange = "visibilitychange";
+         } else if (typeof document.msHidden !== "undefined") {
+           hidden = "msHidden";
+           visibilityChange = "msvisibilitychange";
+         } else if (typeof document.webkitHidden !== "undefined") {
+           hidden = "webkitHidden";
+           visibilityChange = "webkitvisibilitychange";
+         }
+         
+         function handleVisibilityChange() {
+           if (document[hidden]) {
+         
+             alert("As a change of tabs has been detected, the test is ending. Please contact support for more details");
+         document.getElementById("Button1").click();
+           }
+         }
+         document.addEventListener("visibilitychange", handleVisibilityChange, false);
+      </script>
+      <script>
+         const height = document.querySelector("#height span"); 
+         const width = document.querySelector("#width span");
+         var n=0;
+         
+         window.onresize = function() {
+         if(n==0){
+         alert("We have noticed that your browser window was resized, please refrain from doing so in the future as that would lead to the test ending");
+         }
+         if(n==1){
+         document.getElementById("Button2").click();}
+         
+         n=1;
+         };		  
+         
+         
+      </script>      
+      <script>
+         //Check if online or offline
+                 function isOnline() { 
+           
+                     if (navigator.onLine) { 
+                         alert("User is online");
+                     } else { 
+                         alert("User has gone offline");
+                     } 
+                 } 
+             
+      </script>
+      <script>
+         //get OS
+                 function operatingSytem() {  
+                     var OSName="Unknown OS"; 
+                     if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows"; 
+                     if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS"; 
+                     if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX"; 
+                     if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux"; 
+                       
+                     // Display the OS name 
+                     alert("Operating system is: "+OSName);
+                 }  
+             
+      </script>  
+      <script>
+         //Get IP
+                 // Add "https://ipinfo.io" statement 
+                 // this will communicate with the ipify servers  
+                 // in order to retrieve the IP address 
+           
+                 $.get("https://ipinfo.io", function(response) { 
+                     alert("User IP is: "+response.ip);
+         operatingSytem();
+         isOnline();
+                 }, "json") 
+           
+                 // "json" shows that data will be fetched in json format 
+             
+      </script> 
+      <script>
+         //disabling right click
+         	document.addEventListener("contextmenu", function(e){
+             		e.preventDefault();
+         	}, false);
+             
+      </script>
+      <style>
+         /*disabling right click 2nd layer*/
+         .unselectable {
+         -webkit-user-select: none;
+         -webkit-touch-callout: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+         color: #cc0000;
+         }
+      </style>
+      <meta charset="utf-8">
+      <title>Passive Proctoring</title>
+      <style>
+         body
+         {
+         background-color: #FFFFFF;
+         color: #000000;
+         font-family: Arial;
+         font-weight: normal;
+         font-size: 13px;
+         line-height: 1.1875;
+         margin: 0;
+         padding: 0;
+         }
+         a
+         {
+         color: #0000FF;
+         text-decoration: underline;
+         }
+         a:visited
+         {
+         color: #800080;
+         }
+         a:active
+         {
+         color: #FF0000;
+         }
+         a:hover
+         {
+         color: #0000FF;
+         text-decoration: underline;
+         }
+         #wb_Text1
+         {
+         background-color: transparent;
+         background-image: none;
+         border: 0px solid #C0C0C0;
+         padding: 0;
+         margin: 0;
+         text-align: left;
+         }
+         #wb_Text1 div
+         {
+         text-align: left;
+         }
+         #wb_Text2
+         {
+         background-color: transparent;
+         background-image: none;
+         border: 0px solid #C0C0C0;
+         padding: 0;
+         margin: 0;
+         text-align: left;
+         }
+         #wb_Text2 div
+         {
+         text-align: left;
+         }
+         #Editbox1
+         {
+         border: 1px solid #CCCCCC;
+         border-radius: 4px;
+         background-color: transparant;
+         background-image: none;
+         color :#000000;
+         font-family: Arial;
+         font-weight: normal;
+         font-size: 13px;
+         line-height: 52px;
+         padding: 4px 4px 4px 4px;
+         margin: 0;
+         text-align: left;
+         }
+         #Editbox1:focus
+         {
+         border-color: #66AFE9;
+         -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+         -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+         box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+         outline: 0;
+         }
+         #wb_Text3
+         {
+         background-color: transparent;
+         background-image: none;
+         border: 0px solid #C0C0C0;
+         padding: 0;
+         margin: 0;
+         text-align: left;
+         }
+         #wb_Text3 div
+         {
+         text-align: left;
+         }
+         #Editbox2
+         {
+         border: 1px solid #CCCCCC;
+         border-radius: 4px;
+         background-color: transparant;
+         background-image: none;
+         color :#000000;
+         font-family: Arial;
+         font-weight: normal;
+         font-size: 13px;
+         line-height: 52px;
+         padding: 4px 4px 4px 4px;
+         margin: 0;
+         text-align: left;
+         }
+         #Editbox2:focus
+         {
+         border-color: #66AFE9;
+         -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+         -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+         box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+         outline: 0;
+         }
+         #wb_Text4
+         {
+         background-color: transparent;
+         background-image: none;
+         border: 0px solid #C0C0C0;
+         padding: 0;
+         margin: 0;
+         text-align: left;
+         }
+         #wb_Text4 div
+         {
+         text-align: left;
+         }
+         #wb_RadioButton1
+         {
+         margin: 0;
+         }
+         #wb_RadioButton1, #wb_RadioButton1 *, #wb_RadioButton1 *::before, #wb_RadioButton1 *::after
+         {
+         box-sizing: border-box;
+         }
+         #wb_RadioButton1 input[type='radio']
+         {
+         position: absolute;
+         padding: 0;
+         margin: 0;
+         opacity: 0;
+         z-index: 1;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         }
+         #wb_RadioButton1 label
+         {
+         display: inline-block;
+         vertical-align: middle;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 0;
+         height: 0;
+         padding: 0;
+         }
+         #wb_RadioButton1 label::before
+         {
+         content: "";
+         display: inline-block;
+         position: absolute;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         background-color: #FFFFFF;
+         border: 1px solid #CCCCCC;
+         border-radius: 50%;
+         }
+         #wb_RadioButton1 label::after
+         {
+         display: inline-block;
+         position: absolute;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         padding: 0;
+         text-align: center;
+         line-height: 21px;
+         border-radius: 50%;
+         color: #FFFFFF;
+         content: " ";
+         -webkit-transform: scale(0, 0);
+         -moz-transform: scale(0, 0);
+         transform: scale(0, 0);
+         }
+         #wb_RadioButton1 input[type='radio']:checked + label::after
+         {
+         background-color: #3370B7;
+         background-image: none;
+         border-color: #3370B7;
+         -webkit-transform: scale(0.8, 0.8);
+         -moz-transform: scale(0.8, 0.8);
+         transform: scale(0.8, 0.8);
+         }
+         #wb_RadioButton1 input[type='radio']:focus + label::before
+         {
+         outline: thin dotted;
+         }
+         #wb_RadioButton2
+         {
+         margin: 0;
+         }
+         #wb_RadioButton2, #wb_RadioButton2 *, #wb_RadioButton2 *::before, #wb_RadioButton2 *::after
+         {
+         box-sizing: border-box;
+         }
+         #wb_RadioButton2 input[type='radio']
+         {
+         position: absolute;
+         padding: 0;
+         margin: 0;
+         opacity: 0;
+         z-index: 1;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         }
+         #wb_RadioButton2 label
+         {
+         display: inline-block;
+         vertical-align: middle;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 0;
+         height: 0;
+         padding: 0;
+         }
+         #wb_RadioButton2 label::before
+         {
+         content: "";
+         display: inline-block;
+         position: absolute;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         background-color: #FFFFFF;
+         border: 1px solid #CCCCCC;
+         border-radius: 50%;
+         }
+         #wb_RadioButton2 label::after
+         {
+         display: inline-block;
+         position: absolute;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         padding: 0;
+         text-align: center;
+         line-height: 21px;
+         border-radius: 50%;
+         color: #FFFFFF;
+         content: " ";
+         -webkit-transform: scale(0, 0);
+         -moz-transform: scale(0, 0);
+         transform: scale(0, 0);
+         }
+         #wb_RadioButton2 input[type='radio']:checked + label::after
+         {
+         background-color: #3370B7;
+         background-image: none;
+         border-color: #3370B7;
+         -webkit-transform: scale(0.8, 0.8);
+         -moz-transform: scale(0.8, 0.8);
+         transform: scale(0.8, 0.8);
+         }
+         #wb_RadioButton2 input[type='radio']:focus + label::before
+         {
+         outline: thin dotted;
+         }
+         #wb_RadioButton3
+         {
+         margin: 0;
+         }
+         #wb_RadioButton3, #wb_RadioButton3 *, #wb_RadioButton3 *::before, #wb_RadioButton3 *::after
+         {
+         box-sizing: border-box;
+         }
+         #wb_RadioButton3 input[type='radio']
+         {
+         position: absolute;
+         padding: 0;
+         margin: 0;
+         opacity: 0;
+         z-index: 1;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         }
+         #wb_RadioButton3 label
+         {
+         display: inline-block;
+         vertical-align: middle;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 0;
+         height: 0;
+         padding: 0;
+         }
+         #wb_RadioButton3 label::before
+         {
+         content: "";
+         display: inline-block;
+         position: absolute;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         background-color: #FFFFFF;
+         border: 1px solid #CCCCCC;
+         border-radius: 50%;
+         }
+         #wb_RadioButton3 label::after
+         {
+         display: inline-block;
+         position: absolute;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         padding: 0;
+         text-align: center;
+         line-height: 21px;
+         border-radius: 50%;
+         color: #FFFFFF;
+         content: " ";
+         -webkit-transform: scale(0, 0);
+         -moz-transform: scale(0, 0);
+         transform: scale(0, 0);
+         }
+         #wb_RadioButton3 input[type='radio']:checked + label::after
+         {
+         background-color: #3370B7;
+         background-image: none;
+         border-color: #3370B7;
+         -webkit-transform: scale(0.8, 0.8);
+         -moz-transform: scale(0.8, 0.8);
+         transform: scale(0.8, 0.8);
+         }
+         #wb_RadioButton3 input[type='radio']:focus + label::before
+         {
+         outline: thin dotted;
+         }
+         #wb_RadioButton4
+         {
+         margin: 0;
+         }
+         #wb_RadioButton4, #wb_RadioButton4 *, #wb_RadioButton4 *::before, #wb_RadioButton4 *::after
+         {
+         box-sizing: border-box;
+         }
+         #wb_RadioButton4 input[type='radio']
+         {
+         position: absolute;
+         padding: 0;
+         margin: 0;
+         opacity: 0;
+         z-index: 1;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         }
+         #wb_RadioButton4 label
+         {
+         display: inline-block;
+         vertical-align: middle;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 0;
+         height: 0;
+         padding: 0;
+         }
+         #wb_RadioButton4 label::before
+         {
+         content: "";
+         display: inline-block;
+         position: absolute;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         background-color: #FFFFFF;
+         border: 1px solid #CCCCCC;
+         border-radius: 50%;
+         }
+         #wb_RadioButton4 label::after
+         {
+         display: inline-block;
+         position: absolute;
+         width: 21px;
+         height: 21px;
+         left: 0;
+         top: 0;
+         padding: 0;
+         text-align: center;
+         line-height: 21px;
+         border-radius: 50%;
+         color: #FFFFFF;
+         content: " ";
+         -webkit-transform: scale(0, 0);
+         -moz-transform: scale(0, 0);
+         transform: scale(0, 0);
+         }
+         #wb_RadioButton4 input[type='radio']:checked + label::after
+         {
+         background-color: #3370B7;
+         background-image: none;
+         border-color: #3370B7;
+         -webkit-transform: scale(0.8, 0.8);
+         -moz-transform: scale(0.8, 0.8);
+         transform: scale(0.8, 0.8);
+         }
+         #wb_RadioButton4 input[type='radio']:focus + label::before
+         {
+         outline: thin dotted;
+         }
+         #wb_Text5
+         {
+         background-color: transparent;
+         background-image: none;
+         border: 0px solid #C0C0C0;
+         padding: 0;
+         margin: 0;
+         text-align: left;
+         }
+         #wb_Text5 div
+         {
+         text-align: left;
+         }
+         #wb_Text6
+         {
+         background-color: transparent;
+         background-image: none;
+         border: 0px solid #C0C0C0;
+         padding: 0;
+         margin: 0;
+         text-align: left;
+         }
+         #wb_Text6 div
+         {
+         text-align: left;
+         }
+         #wb_Text7
+         {
+         background-color: transparent;
+         background-image: none;
+         border: 0px solid #C0C0C0;
+         padding: 0;
+         margin: 0;
+         text-align: left;
+         }
+         #wb_Text7 div
+         {
+         text-align: left;
+         }
+         #wb_Text8
+         {
+         background-color: transparent;
+         background-image: none;
+         border: 0px solid #C0C0C0;
+         padding: 0;
+         margin: 0;
+         text-align: left;
+         }
+         #wb_Text8 div
+         {
+         text-align: left;
+         }
+         #Button1
+         {
+         border: 1px solid #2E6DA4;
+         border-radius: 4px;
+         background-color: #3370B7;
+         background-image: none;
+         color: #FFFFFF;
+         font-family: Arial;
+         font-weight: normal;
+         font-size: 13px;
+         -webkit-appearance: none;
+         margin: 0;
+         }
+      </style>
+   </head>
+   <body class="unselectable">
+      <img src="images/int.png" style="position:absolute;left:10px;top:10px;border-width:0;z-index:9999;width:80px;height:75px">
+      <div id="wb_Text1" style="position:absolute;left:241px;top:23px;width:408px;height:48px;z-index:1;">
+         <div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+            <div><span style="font-size:35px;line-height:42px;"><strong>Basic Cyber Hygiene</strong></span></div>
+         </div>
+      </div>
+      <div id="wb_Text2" style="position:absolute;left:9px;top:85px;width:398px;height:37px;z-index:2;">
+         <div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+            <div>1. Explain the importance of DNS Servers in about 100 words</div>
+         </div>
+      </div>
+      <input type="text" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off id="Editbox1" style="position:absolute;left:27px;top:114px;width:245px;height:52px;z-index:3;" name="Editbox1" value="" spellcheck="false">
+      <div id="wb_Text3" style="position:absolute;left:12px;top:202px;width:637px;height:52px;z-index:4;">
+         <div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+            <div>2. Write you analysis on the &quot;Maze Ransomeware and its impact on todays cyber attack surface</div>
+         </div>
+      </div>
+      <input type="text" onselectstart="return false" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off id="Editbox2" style="position:absolute;left:30px;top:229px;width:245px;height:52px;z-index:5;" name="Editbox2" value="" spellcheck="false">
+      <div id="wb_Text4" style="position:absolute;left:10px;top:316px;width:251px;height:37px;z-index:6;">
+         <div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+            <div>3. John The Ripper is ______ tool</div>
+         </div>
+      </div>
+      <div id="wb_RadioButton1" style="position:absolute;left:32px;top:347px;width:21px;height:21px;z-index:7;">
+         <input type="radio" id="RadioButton1" name="" value="on" style="position:absolute;left:0;top:0;"><label for="RadioButton1"></label>
+      </div>
+      <div id="wb_RadioButton2" style="position:absolute;left:34px;top:385px;width:21px;height:21px;z-index:8;">
+         <input type="radio" id="RadioButton2" name="" value="on" style="position:absolute;left:0;top:0;"><label for="RadioButton2"></label>
+      </div>
+      <div id="wb_RadioButton3" style="position:absolute;left:247px;top:342px;width:21px;height:21px;z-index:9;">
+         <input type="radio" id="RadioButton3" name="" value="on" style="position:absolute;left:0;top:0;"><label for="RadioButton3"></label>
+      </div>
+      <div id="wb_RadioButton4" style="position:absolute;left:250px;top:380px;width:21px;height:21px;z-index:10;">
+         <input type="radio" id="RadioButton4" name="" value="on" style="position:absolute;left:0;top:0;"><label for="RadioButton4"></label>
+      </div>
+      <div id="wb_Text5" style="position:absolute;left:54px;top:349px;width:129px;height:17px;z-index:11;">
+         <div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+            <div>Password Cracking</div>
+         </div>
+      </div>
+      <div id="wb_Text6" style="position:absolute;left:54px;top:387px;width:129px;height:17px;z-index:12;">
+         <div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+            <div>MITM</div>
+         </div>
+      </div>
+      <div id="wb_Text7" style="position:absolute;left:270px;top:344px;width:129px;height:17px;z-index:13;">
+         <div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+            <div>Network Analysis</div>
+         </div>
+      </div>
+      <div id="wb_Text8" style="position:absolute;left:272px;top:382px;width:129px;height:17px;z-index:14;">
+      <div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+      <div>None of the above</div>
+      <input type="submit" id="end test" onclick="location.href = 'end.html';">
+      <input type="submit" id="Button1" hidden=="true" onclick="location.href = 'sudden_end.html';">
+      <input type="submit" id="Button2" hidden=="true" onclick="location.href = 'sudden_resize.html';">
+   </body>
+</html>

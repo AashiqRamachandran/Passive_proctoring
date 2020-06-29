@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+<title>Registration</title>
+      <script src= 
+         "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
+      <script>
+         //Get IP
+function get_ip(){
+                 $.get("https://ipinfo.io", function(response) {
+                     alert("User IP is: "+response.ip); 
+                 }, "json")
+}
+ 
+</script> 
+
+<style>
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+#wb_Text1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #C0C0C0;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text1 div
+{
+   text-align: left;
+}
+#Editbox1
+{
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+   background-color: transparent;
+   background-image: none;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 12px;
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+   text-align: left;
+}
+#Editbox1:focus
+{
+   border-color: #66AFE9;
+   -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+   -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+   outline: 0;
+}
+#Editbox2
+{
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+   background-color: transparent;
+   background-image: none;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 12px;
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+   text-align: left;
+}
+#Editbox2:focus
+{
+   border-color: #66AFE9;
+   -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+   -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+   outline: 0;
+}
+#Editbox3
+{
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+   background-color: transparent;
+   background-image: none;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 12px;
+   padding: 4px 4px 4px 4px;
+   margin: 0;
+   text-align: left;
+}
+#Editbox3:focus
+{
+   border-color: #66AFE9;
+   -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+   -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(102, 175, 233, 0.60);
+   outline: 0;
+}
+#wb_Text2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #C0C0C0;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text2 div
+{
+   text-align: left;
+}
+#wb_Text3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #C0C0C0;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text3 div
+{
+   text-align: left;
+}
+#wb_Text4
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #C0C0C0;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text4 div
+{
+   text-align: left;
+}
+#Button1
+{
+   border: 1px solid #2E6DA4;
+   border-radius: 4px;
+   background-color: #3370B7;
+   background-image: none;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   -webkit-appearance: none;
+   margin: 0;
+}
+</style>
+</head>
+<body>
+<img src="images/int.png" style="position:absolute;left:10px;top:10px;border-width:0;z-index:9999;width:80px;height:70px">
+<div id="wb_Text1" style="position:absolute;left:343px;top:17px;width:135px;height:26px;z-index:1;">
+<div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+<div><span style="font-size:21px;line-height:26px;">Registration</span></div>
+</div>
+</div>
+<input type="text" id="Editbox1" style="position:absolute;left:128px;top:75px;width:116px;height:12px;z-index:2;" name="Editbox1" value="" spellcheck="false">
+<input type="text" id="Editbox2" style="position:absolute;left:130px;top:123px;width:116px;height:12px;z-index:3;" name="Editbox2" value="" spellcheck="false">
+<input type="text" id="Editbox3" style="position:absolute;left:132px;top:168px;width:116px;height:12px;z-index:4;" name="Editbox3" value="" spellcheck="false">
+<div id="wb_Text2" style="position:absolute;left:24px;top:82px;width:82px;height:17px;z-index:5;">
+<div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+<div>Enter name</div>
+</div>
+</div>
+<div id="wb_Text3" style="position:absolute;left:24px;top:124px;width:82px;height:17px;z-index:6;">
+<div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+<div>Enter email</div>
+</div>
+</div>
+<div id="wb_Text4" style="position:absolute;left:16px;top:171px;width:103px;height:23px;z-index:7;">
+<div style="font-family:Sans;font-size:13px;line-height:17px;color:#000000;">
+<div>Enter mobile no</div>
+</div>
+</div>
+<input type="submit" id="Button1" name="" value="Register" style="position:absolute;left:369px;top:246px;width:97px;height:26px;z-index:8;" onclick="location.href = 'test.html';">
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<p>Points to note before beginning:</br>
+1. Please do not switch tabs during the test</br>
+2. Please do not resize tabs during the test</br>
+3. Please do not attempt to copy or paste any information during the test</br>
+4. Please remeber any and all information seen in this page and those it entrails, are copyrighted and exclusive to authorised personel only,</br>
+any attempt to remove or share this content is strictly prohibited
+</p>
+
+</body>
+</html>
